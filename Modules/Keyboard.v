@@ -2,6 +2,11 @@ module read_keyboard (kb_data, kb_clock, ascii);
 	input kb_data;
 	input kb_clock;
 	output [6:0] ascii;
+	wire [7:0] raw_data;
+	
+	// Last step: process ascii's
+	convert_readable(raw_data[7:0], ascii[6:0]);
+	
 endmodule
 
 module convert_readable(
