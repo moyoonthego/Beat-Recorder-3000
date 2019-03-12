@@ -12,7 +12,7 @@ module read_keyboard (kb_data, kb_clock, ascii);
 	
 endmodule
 
-
+// This module created by aid from a referenced project (Notepad--)
 module get_raw(clk, data, raw);
     input wire clk; // Clock pin form keyboard
     input wire data; //Data pin form keyboard
@@ -35,7 +35,6 @@ module get_raw(clk, data, raw);
         
     always @(negedge clk) //Activating at negative edge of clock from keyboard
     begin
-    
     case(b)
         1:; //first bit
         2:data_curr[0]<=data;
