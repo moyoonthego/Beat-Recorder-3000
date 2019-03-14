@@ -5,8 +5,8 @@ module main (SW, KEY, PS2_KBCLK, PS2_KBDAT, GPIO, HEX0, HEX1);
 	input PS2_KBDAT;    // Data input from the keyboard (byte)      (This and the above input need to be deciphered to values we can work with)
 	output [35:0] GPIO; // These are our buzzer speakers. 7-0 is main buzzer. 35-28 is register buzzer #1. 27-20 is #2. 19-12 is #3.
 	
-	output [7:0] HEX0; // NOT NEEDED - DESIGN
-	output [7:0] HEX1; // ^
+	output HEX0; // NOT NEEDED - DESIGN
+	output HEX1; // ^
 	
 	// Convert the keyboard input into processable data (ie, get ascii symbol of key)
 	wire [6:0] ascii_val;

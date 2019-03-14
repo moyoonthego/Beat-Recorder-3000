@@ -1,7 +1,7 @@
 module show_key (ascii_val, note, symbol);
 	input [6:0] ascii_val;
-	output [7:0] symbol;
-	output [7:0] note;
+	output reg [7:0] symbol;
+	output reg [7:0] note;
 
 	// drawing key based on the key that was clicked
 	always @(*)
